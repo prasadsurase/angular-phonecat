@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="dummyWallmartApp">
+<html lang="en" ng-app="phoneCatApp">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -21,13 +21,14 @@
     <script src="js/bootstrap.min.js"></script>
     
     <!-- AngularJS -->
-    <script src="js/angular.min.js"></script>
-    <!--
-    <script src="lib/app.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-resource.js"></script>
+
+    <script src="lib/application.js"></script>
     <script src="lib/controllers.js"></script>
     <script src="lib/services.js"></script>
     <script src="lib/routes.js"></script>
-    -->
   </head>
 
   <body>
@@ -50,8 +51,21 @@
         <div class='col-md-3'>
         </div>
         <div class='col-md-9'>
+          <div ng-view></div>
         </div>
       </div>
     </div>
   </body>
 </html>
+
+<script type="text/ng-template" id="views/phones/list.html">
+  This is the content of the list template
+</script>
+
+<script type="text/ng-template" id="views/phones/show.html">
+  This is the content of the show template
+</script>
+
+<script type="text/ng-template" id="views/phones/edit.html">
+  This is the content of the edit template
+</script>
