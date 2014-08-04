@@ -59,7 +59,12 @@
 </html>
 
 <script type="text/ng-template" id="views/phones/list.html">
-  This is the content of the list template
+  <ul>
+    <li ng-repeat="phone in phones" class="">
+      <p>{{phone.name}}</p>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
 </script>
 
 <script type="text/ng-template" id="views/phones/show.html">
