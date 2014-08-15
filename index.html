@@ -19,7 +19,7 @@
 
     <!-- Bootstrap core JS -->
     <script src="js/bootstrap.min.js"></script>
-    
+
     <!-- AngularJS -->
     <script src="js/angular.js"></script>
     <script src="js/angular-route.js"></script>
@@ -48,9 +48,9 @@
 
     <div class="container">
       <div class='row'>
-        <div class='col-md-3'>
+        <div class='col-md-2'>
         </div>
-        <div class='col-md-9'>
+        <div class='col-md-10'>
           <div ng-view></div>
         </div>
       </div>
@@ -60,17 +60,29 @@
 
 <script type="text/ng-template" id="views/phones/list.html">
   <ul>
-    <li ng-repeat="phone in phones" class="">
-      <p>{{phone.name}}</p>
-      <p>{{phone.snippet}}</p>
-    </li>
-  </ul>
-</script>
+    <li ng-repeat="phone in phones" class="well">
+    <div class='row'>
+      <div class='col-md-2'>
+      </div>
+      <div class='col-md-10'>
+        <a href="#/phones/{{phone.id}}">
+          <strong>{{phone.name}}</strong>
+        </a>
+        <p>{{phone.snippet}}</p>
+      </div>
+      </li>
+    </ul>
+  </script>
 
-<script type="text/ng-template" id="views/phones/show.html">
-  This is the content of the show template
-</script>
+  <script type="text/ng-template" id="views/phones/show.html">
+    <p>{{phone.id}}</p>
+    <p>{{phone.name}}</p>
+    <p>{{phone.snippet}}</p>
+    <p>{{phone.features}}</p>
+    <p>{{phone.os}}</p>
+    <p>{{phone.os_version}}</p>
+  </script>
 
-<script type="text/ng-template" id="views/phones/edit.html">
-  This is the content of the edit template
-</script>
+  <script type="text/ng-template" id="views/phones/edit.html">
+    This is the content of the edit template
+  </script>
